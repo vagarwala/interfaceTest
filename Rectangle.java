@@ -19,6 +19,11 @@ public class Rectangle extends Shape{
 	public Rectangle(){
 		width = 1.0; length = 1.0;
 	}
+	public Rectangle(double length, double width, String name){
+		super(name);
+		this.length = length;
+		this.width = width;
+    }
 	public String toString(){
 		return "A Rectangle with width " + width + " and length " + length + ", which is a subclass of " + super.toString();
 	}

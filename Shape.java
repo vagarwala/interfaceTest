@@ -1,10 +1,14 @@
 public abstract class Shape{
 	private String color;
 	private boolean filled;
+	private String name;
 
 	public Shape(){
 		this("black", false);
 	}
+	public Shape(String name){
+		this.name = name;
+    }
 	public Shape(String c, boolean f){
 		color = c;
 		filled = f;
@@ -12,6 +16,9 @@ public abstract class Shape{
 	public String getColor(){
 		return color;
 	}
+	public String getName(){
+		return name;
+    }
 	public void setColor(String c){
 		color = c;
 	}

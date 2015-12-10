@@ -1,4 +1,4 @@
-public class Circle extends Shape{
+public class Circle extends Shape implements Area{
 	private double radius;
 
 	public double getRadius(){
@@ -13,9 +13,13 @@ public class Circle extends Shape{
 	public Circle(){
 		radius = 1.0;
 	}
+	public Circle(double radius, String name){
+		super(name);
+		this.radius = radius;
+    }
 	public String toString(){
-		return "A circle with radius " + radius + ", which is a subclass of " + super.toString();
-	}
+		return "Circle "+getName()+" with radius of "+getRadius();
+    }
 	public double getArea(){
 		return radius*radius*Math.PI;
 	}
