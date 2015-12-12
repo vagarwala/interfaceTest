@@ -14,5 +14,9 @@ public class Cylinder extends Circle{
     public String toString(){
 	   return "Cylinder "+getName()+" with radius of "+getRadius()+" and height of "+getHeight();
     }
+
+    public double getVolume(){
+        return Math.PI * getRadius() * getRadius() * getHeight();
+    }
 }
 
